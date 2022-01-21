@@ -1,7 +1,9 @@
 var sequelize = require('../config/db.config')
 var Sequelize = require("sequelize");
 var Category = require('./category');
-const Supplier = require('./supplier');
+var Supplier = require('./supplier');
+var WareHouse = require('./warehouse');
+
 
 var Inventory = sequelize.define('inventory', {
 
@@ -11,7 +13,6 @@ var Inventory = sequelize.define('inventory', {
         type: Sequelize.UUID,
         primaryKey: true,
         defaultValue: Sequelize.UUIDV1()
-
 
     } ,
     createdAt: Sequelize.DATE,
@@ -36,7 +37,16 @@ var Inventory = sequelize.define('inventory', {
             key: 's_id'
           }
           
-    }
+    },
+    w_id: {
+        type : Sequelize.INTEGER,
+        references: {
+            model: WareHouse, 
+            key: 'id'
+          }
+         // field: 'w_id'
+        
+    },
 }
 
 )

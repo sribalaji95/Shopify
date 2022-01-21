@@ -25,7 +25,7 @@ router.patch('/updateInventory/:id', Inventory.updateInventory);
 router.put('/deleteInventory/:id',Inventory.deleteInventory);
 router.post('/addInventory',Inventory.addInventory);
 router.get('/exportCSV', Inventory.exportCSV)
-
+router.post('/addWarehouse/:id', Inventory.createWareHouse)
 
 
 app.use('/v1', router);
