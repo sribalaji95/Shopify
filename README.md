@@ -47,3 +47,18 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ## Testing the project
 
     $ npm test
+
+## APIs for Crud Operation
+
+    '/getAll'  -> Fetching All the inventories
+    '/updateInventory/:id' -> Updating the particular invenrtory
+    '/deleteInventory/:id' -> Deleting the particular inventory
+    '/addInventory' -> Adding new Inventory
+
+## API to export the inventories to CSV
+    '/exportCSV' -> Exporting to CSV
+
+## To add a new warehouse and linking it with inventories
+    'addWarehouse/:id'
+
+
